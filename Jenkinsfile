@@ -17,7 +17,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'venv\\Scripts\\activate && pytest'
+                bat 'venv\\Scripts\\activate && set PYTHONPATH=%CD% && pytest'
+
             }
         }
     }
